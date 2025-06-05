@@ -17,10 +17,13 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
+    protected $primaryKey = 'username';
+    public $incrementing = false;
+    protected $keyType = 'string';
     protected $fillable = [
-        'name',
-        'email',
+        'username',
         'password',
+        'role',
     ];
 
     /**
@@ -30,7 +33,6 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
-        'remember_token',
     ];
 
     /**
@@ -38,11 +40,18 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
-    protected function casts(): array
+
+    public function mahasiswa()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->hasOne(Mahasiswa::class, 'nim', 'username');
     }
+    public function biodata()
+    {
+        return $this->hasOne(Biodata::class, 'username', 'username');
+    }
+    public function keluhan()
+    {
+        return $this->hasOne(Keluhan::class, 'username', 'username');   
+    }
+
 }
