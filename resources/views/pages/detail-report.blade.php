@@ -262,17 +262,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="flex flex-col sm:flex-row gap-3">
-                    <button onclick="showEditModal()" class="px-6 py-3 bg-blue-100 text-blue-700 rounded-xl font-semibold hover:bg-blue-200 transition-all duration-300 flex items-center justify-center">
-                        <i class="fas fa-edit mr-2"></i>
-                        Edit Laporan
-                    </button>
-                    <button onclick="showShareModal()" class="px-6 py-3 bg-gray-100 text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300 flex items-center justify-center">
-                        <i class="fas fa-share mr-2"></i>
-                        Bagikan
-                    </button>
-                </div>
             </div>
         </div>
 
@@ -482,23 +471,6 @@
                         <div class="flex justify-between items-center">
                             <span class="text-gray-600">Penanggung Jawab:</span>
                             <span class="text-gray-800 font-medium">Tim Maintenance</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Related Reports -->
-                <div class="glass-card rounded-xl p-6 fade-in">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Laporan Terkait</h3>
-                    <div class="space-y-3">
-                        <div class="p-3 bg-white/60 rounded-lg hover:bg-white/80 transition-colors cursor-pointer">
-                            <h4 class="font-medium text-gray-800 text-sm mb-1">AC Ruang 3B Bermasalah</h4>
-                            <p class="text-xs text-gray-600 mb-2">Fasilitas • 2 hari yang lalu</p>
-                            <span class="status-badge status-pending text-xs">Menunggu</span>
-                        </div>
-                        <div class="p-3 bg-white/60 rounded-lg hover:bg-white/80 transition-colors cursor-pointer">
-                            <h4 class="font-medium text-gray-800 text-sm mb-1">Lampu Gedung Teknik</h4>
-                            <p class="text-xs text-gray-600 mb-2">Fasilitas • 1 minggu yang lalu</p>
-                            <span class="status-badge status-resolved text-xs">Selesai</span>
                         </div>
                     </div>
                 </div>

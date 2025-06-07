@@ -2,17 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('auth.login');
-    }
+        $username = $request->username;
+        $password = $request->password;
 
-    public function login(Request $request)
-    {
-        dd($request->all());
+        $user = DB::table('users')
+            ->where('username', $username)
+            ->where('password', $password) 
+            ->first();
+
+        if ($user && $user->role === 'mahasiswa') {
+            session(['user' => $user]);
+
+            return redirect('/home');
+        }
+        
+        return back()->with('error', 'Username, password, atau role salah');
     }
 }

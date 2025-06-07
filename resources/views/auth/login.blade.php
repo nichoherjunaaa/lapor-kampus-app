@@ -42,7 +42,7 @@
             <h1 class="text-3xl font-bold text-gray-800">Masuk ke <span class="text-green-600">LaporKampus</span></h1>
             <p class="text-gray-600 mt-2">Masukkan akun Anda untuk melanjutkan</p>
         </div>
-        <form action="{{ route('login.process') }}" method="POST" class="space-y-6">
+        <form action="/login" method="POST" class="space-y-6">
             @csrf
             <div>
                 <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username / NIM</label>
