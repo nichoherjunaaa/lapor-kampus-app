@@ -49,8 +49,10 @@
                         <i class="fas fa-user text-white text-sm"></i>
                     </div>
                     <div class="hidden lg:block">
-                        <p class="text-sm font-semibold text-gray-800">Ahmad Fauzi</p>
-                        <p class="text-xs text-gray-600">2021001234</p>
+                        @if (session('user'))
+                            <p class="text-sm font-semibold text-gray-800">{{ session('user')->mahasiswa->nama }}</p>
+                            <p class="text-xs text-gray-600">{{ session('user')->username }}</p>
+                        @endif
                     </div>
                 </div>
             </div>
